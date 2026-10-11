@@ -1,0 +1,234 @@
+#courses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(220, 227, 241);
+}
+
+.course_headings {
+    padding: 2rem 0 0 2rem;
+    align-self: flex-start;
+}
+
+.course_headings span {
+    font-weight: 600;
+}
+
+.course_headings h4 {
+    margin-top: .8rem;
+    font-size: 1.8rem;
+}
+
+
+.course_categories {
+    display: flex;
+    align-self: flex-end;
+    padding: 0 2rem 0.5rem 0;
+}
+
+.course_categories ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.course_categories ul li {
+    list-style: none;
+    color: gray;
+}
+
+.course_categories ul li:first-child {
+    color: black;
+    font-weight: 600;
+}
+
+
+/* Styling Course Cards */
+
+.courses_cards {
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.course_card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 400px;
+    max-width: 550px;
+}
+
+.image_container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.courseCardImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+    
+}
+
+
+.cardDescriptions {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    gap: 20px;
+    padding: 2rem 1rem 0 1rem;
+    flex-grow: 1;
+    
+}
+
+.card_desc_div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.cardTitle {
+    font-weight: 600;
+    padding-top: 20px;
+    height: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.cardDesc {
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-right: 2rem;
+    height: 3rem;
+}
+
+.stars_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 1;
+    padding-bottom: 20px;
+    height: 22px;
+}
+.stars_div img {
+    display: block;
+}
+.stars_div span {
+    color: gray;
+}
+
+
+.lessonEnroll_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+    width: 100%;
+    border-top: 1px solid grey;
+    color: black;
+    font-weight: 600;
+    height: 54px;
+    margin-bottom: 18px;
+}
+
+.lesson {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid grey;
+    padding-right: 2rem;
+}
+.enroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.free_div {
+    position: absolute;
+    right: 1.5rem;
+    top: -1.6rem;
+    background-color: blue;
+    border-radius: 50%;
+    padding: 1.2rem 1rem;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+}
+
+
+.button_wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.course_detail_btn {
+    width: 70%;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    padding: .8rem 0;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+
+.course_card:hover .lessonEnroll_div {
+    opacity: 0;
+    visibility: hidden;
+}
+.course_card:hover .courseCardImg {
+    transform: scale(1.1);
+}
+.course_card:hover .free_div {
+    transform: scale(1.2);
+    font-size: 1rem;
+}
+
+.course_card:hover .course_detail_btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.course_detail_btn:hover {
+    transform: scale(0.95) ;
+}
+
+
+
+.course_para {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 40px;
+    margin: 2rem 0 5rem 0;
+    font-weight: 500;
+    opacity: 0;
+    transform: translatey(100px);
+    transition: all 0.8s ease;
+}
+
+.course_para.is-visible {
+    opacity: 1;
+    transform: translatey(0);
+}
+
+.course_para span {
+    text-decoration: underline;
+}

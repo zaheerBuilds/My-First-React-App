@@ -1,0 +1,71 @@
+#hero {
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-image: url('../../assets/thumbnail1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.brandName {
+    font-size: 7vw;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.brandDesc {
+    padding: 0 30vw;
+    font-size: 1.2rem;
+}
+
+.btnsDiv {
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+
+.btnContact, .btnStory {
+    border: none;
+    background-color: blue;
+    padding: 1rem 1.6rem;
+    border-radius: .5rem;
+    color: white;
+    font-weight: 900;
+    font-size: 1rem;
+    transition: background-color .5s ease-in;
+}
+
+
+.btnStory {
+    color: black;
+    background-color: white;
+}
+
+.btnContact:hover {
+    color: black;
+    background-color: yellow;
+}
+
+.btnStory:hover {
+    color: white;
+    background-color: black;
+}
+
+
+@media (max-width : 767px) {
+    .brandDesc {
+        padding: 0 1.5rem;
+        font-size: 1rem;
+    }
+}
+

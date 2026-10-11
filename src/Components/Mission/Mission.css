@@ -1,0 +1,92 @@
+#mission {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-between;
+    max-width: 85%;
+    margin: 0 auto;
+    gap: 5rem;
+    margin-bottom: 3rem;
+    
+}
+
+.missionHeader {
+    font-size: 3rem;
+    color: black;
+    font-weight: bolder;
+}
+
+
+.missionCards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+
+}
+
+.missionCard {
+    background-color: white;
+    color: black;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2.5rem;
+    border-radius: 2rem;
+}
+
+.missionCard h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: -1rem;
+}
+
+.missionCard p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: gray;
+}
+
+
+
+.missionCard  img {
+    width: 2rem;
+}
+
+
+.missionMessage .missionMsgText img {
+    width: 2rem;
+}
+
+
+.missionMessage {
+    display: flex;
+    flex-direction: row;
+
+    background-color: white;
+    color: black;
+    border-radius: 2rem;
+    height: 450px;
+    box-sizing: border-box;
+    border-radius: 2rem;
+
+}
+
+
+.missionMessage .missionMsgText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 60%;
+    padding: 3rem 2rem;
+}
+
+.simonImg {
+    object-fit: cover;
+    flex: 0 0 40%;
+    height: 450px;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}

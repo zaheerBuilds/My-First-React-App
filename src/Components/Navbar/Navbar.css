@@ -1,0 +1,212 @@
+#nav {
+    position: sticky;
+    top: 0;
+    padding: 2.4rem 3rem;
+    background-color: white;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    min-height: 4rem;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    min-width: 0;
+}
+
+.logo-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+}
+
+.logoImg {
+    object-fit: cover;
+    height: 2.5rem;
+    padding-right: .5rem;
+    flex-shrink: 0;
+}
+
+.logo-name {
+    font-size: 1.5rem;
+    color: blue;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+
+.navList a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+}
+
+.navList a:hover {
+    color: blue;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 0;
+}
+
+.srch-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(215, 211, 211);
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    width: 219px;
+    height: 40px;
+    min-width: 0;
+}
+
+.srch-bar input {
+    border: none;
+    background-color: transparent;
+    padding-left: 0.5rem;
+    width: 100%;
+}
+
+.btn-join-now {
+    border: none;
+    background-color: blue;
+    padding: 1rem 1.4rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    max-height: 48px;
+    transition: height 1s ease-in;
+    white-space: nowrap;
+}
+
+.profile {
+    background-color: rgb(255, 255, 125);
+    padding: .8rem;
+    border-radius: 50%;
+}
+
+.homeImg {
+    object-fit: cover;
+    height: 2rem;
+}
+
+.hamburgerMenu {
+    border: none;
+    display: none;
+}
+
+.hamburgerMenu img {
+    width: 2rem;
+}
+
+.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    gap: 2rem;
+    position: absolute;
+    top: 5rem;
+    right: 2px;
+}
+
+.mobileMenu a {
+    text-decoration: none;
+    color: white;
+}
+
+.mobileMenu a:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navList,
+    .nav-right {
+        display: none;
+    }
+
+    #nav {
+        padding: 2.5rem 1.5rem;
+        overflow: visible;
+    }
+
+    .logoImg {
+        height: 1.8rem;
+    }
+
+    .logo-name {
+        font-size: 1rem;
+        color: blue;
+        font-weight: bold;
+    }
+
+    .hamburgerMenu {
+        display: block;
+    }
+}
+
+@media (min-width: 1160px) {
+    .srch-bar {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 1160px) {
+    .srch-bar {
+        display: none;
+        width: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .nav-left {
+        gap: 2rem;
+    }
+
+    .btn-join-now {
+        padding: 1rem 1.4rem;
+        max-height: 48px;
+        padding: 0.8rem 1.2rem;
+    }
+}
+
+@media (max-width: 835px) {
+    .navList {
+        gap: .5rem;
+        font-size: .9rem;
+        font-weight: normal;
+    }
+}
+
+
+

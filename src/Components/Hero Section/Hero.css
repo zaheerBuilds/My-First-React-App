@@ -1,0 +1,344 @@
+/* Hero.css - Complete rewrite for responsiveness */
+
+/* ----- BASE STYLES ----- */
+#hero {
+  position: relative;
+  background-image: url('../../assets/background-img.webp'); /* Update path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(15, 37, 42); /* Fallback color */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow-x: hidden;
+  top: -70px;
+  flex-direction: column;
+}
+
+/* Dark overlay for better text readability (optional but good) */
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 37, 42, 0.7);
+  z-index: 1;
+}
+
+/* Everything inside hero goes above the overlay */
+#hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ----- CONTAINER (Flexbox for side-by-side layout) ----- */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+  width: 100%;
+}
+
+/* ----- TEXT SECTION ----- */
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-badge {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title .highlight {
+  color: #f59e0b; /* Orange color */
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: white;
+  color: rgb(15, 37, 42);
+  border-color: white;
+}
+
+/* ----- IMAGE SECTION ----- */
+.hero-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 280px;
+}
+
+.hero-image img:first-child {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Floating badges */
+.floating-badges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.badge {
+  position: absolute;
+  width: min(180px, 25%);
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+.badge-1 {
+  bottom: 5%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.badge-2 {
+  top: 15%;
+  right: -10%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ----- DECORATIVE ELEMENTS (Dots & Circle) ----- */
+.blueCircle,
+.yellowDot1,
+.yellowDot2 {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.blueCircle {
+  top: 20%;
+  left: 5%;
+  width: 50px;
+}
+
+.yellowDot1 {
+  top: 60%;
+  left: 8%;
+  width: 30px;
+}
+
+.yellowDot2 {
+  top: 40%;
+  right: 5%;
+  width: 25px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-container {
+    gap: 2rem;
+    padding: 6rem 2rem;
+  }
+ 
+  .blueCircle { width: 40px; top: 15%; }
+  .yellowDot1 { width: 25px; top: 65%; }
+  .yellowDot2 { width: 20px; top: 35%; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 6rem 1.5rem 4rem;
+    gap: 2rem;
+  }
+ 
+  .hero-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .hero-description {
+    max-width: 90%;
+  }
+ 
+  /* Hide decorative elements on mobile */
+  .blueCircle,
+  .yellowDot1,
+  .yellowDot2 {
+    display: none;
+  }
+ 
+  /* Adjust floating badges for mobile */
+  .badge {
+    width: min(120px, 30%);
+  }
+ 
+  .badge-1 {
+    bottom: -5%;
+    left: -10%;
+  }
+ 
+  .badge-2 {
+    top: 10%;
+    right: -5%;
+  }
+ 
+  /* Smaller button on mobile */
+  .hero-btn {
+    padding: 0.6rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 5rem 1rem 3rem;
+  }
+ 
+  .hero-title {
+    font-size: 1.8rem;
+  }
+ 
+  .hero-description {
+    font-size: 0.95rem;
+  }
+ 
+  .hero-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+ 
+  .badge {
+    width: 100px;
+  }
+}
+
+
+.marqTagDiv {
+  display: block;
+  width: 100%;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5rem;
+  padding-bottom: 3.5rem;
+  background-color: rgb(229, 231, 235);
+  overflow: hidden;
+}
+
+
+
+
+.scroller {
+    max-width: 100%;
+}
+
+.scroller__inner {
+    display: flex;
+    width: max-content;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    animation: scroll 6s linear infinite;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+    gap: 10rem;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+    to {
+        transform: translate( calc(-50%));
+    }
+}
+
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* ----Animations---- */ 
+
+
+
+.marqTag-para{
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 0.9s ease;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.marqTag-para.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+

@@ -1,0 +1,294 @@
+#floatingImgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 1rem 2rem 2rem;
+    gap: 5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.img-section {
+    flex: 1;
+    min-width: 280px;
+}
+
+.img-section .img-wrapper {
+    position: relative;
+}
+
+.img-section .img-wrapper img {
+
+    position: absolute;
+}
+
+.achievImg {
+    width: 290px;
+    height: 94px;
+    object-fit: cover;
+    z-index: 11;
+    top: 3rem;
+    left: 5rem;
+}
+
+.studentImg {
+    right: 0;
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    top: 0;
+    z-index: 10;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.manImg {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    top: 12rem;
+    left: 0;
+    z-index: 11;
+    border-radius: 5px;
+}
+
+
+.text-section {
+    flex: 1;
+    min-width: 260px;
+    margin-top: 3rem;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text-content-para {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem
+}
+.text-content-para .span-heading {
+    font-weight: 600;
+    color: black;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+
+.floatingImgs-para-1 {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+
+.floatingImgs-para-2 {
+    color: gray;
+    font-weight: 500;
+    font-size: 10px;
+    margin-bottom: 0rem;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+.choices-contents {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 0;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+
+.choices-contents ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.choices-contents ul li {
+    width: 250px;
+    font-weight: 600;
+    color: black;
+}
+
+.text-get-started-div {
+    display: flex;
+    background-color: rgb(229, 231, 235);
+    border: none;
+    border-radius: 5px;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.9s ease;
+}
+
+.div-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.div-left span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+}
+
+
+
+.div-right button {
+    background-color: black;
+    color: white;
+    padding: 0.6rem 3rem;
+    border-radius: 5px;
+    width: 170px;
+}
+
+
+
+/* Animations */
+
+.achievImg {
+    opacity: 0;
+    transform: translateX(-300px) translateY(20px);
+    transition: all 1s ease;
+}
+
+.studentImg {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.8s ease;
+}
+
+.manImg {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease;
+}
+
+
+.achievImg.is-visible, .studentImg.is-visible{
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.manImg.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+
+.delay-300 {transition-delay: 300ms;}
+
+
+.text-get-started-div.is-visible, .choices-contents.is-visible{
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.span-heading.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.floatingImgs-para-1.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.floatingImgs-para-2.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+/* Responsive FloatingImgs */
+@media (max-width: 1024px) {
+    #floatingImgs {
+        padding: 4rem 1rem 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .img-section,
+    .text-section {
+        width: 100%;
+    }
+
+    .text-get-started-div {
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-wrapper {
+        position: static;
+        height: auto;
+    }
+
+    .img-wrapper img {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .studentImg,
+    .manImg,
+    .achievImg {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: auto;
+        margin: 0 auto;
+    }
+
+    .choices-contents ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .text-get-started-div {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .div-right button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #floatingImgs {
+        padding: 3rem 1rem 1.5rem;
+    }
+
+    .img-section {
+        padding-bottom: 2rem;
+    }
+
+    .text-contents {
+        gap: 1rem;
+    }
+
+    .choices-contents ul li {
+        width: 100%;
+    }
+
+    .text-get-started-div {
+        padding: 1.5rem;
+    }
+}
+
+

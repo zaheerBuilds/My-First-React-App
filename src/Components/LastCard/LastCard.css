@@ -1,0 +1,559 @@
+#lastCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10rem;
+    width: 100%;
+    background-color: rgb(220, 227, 241);
+    
+}
+
+.lastCard-span {
+    color: black;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.lastCard-h3 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    padding: 2rem;
+}
+
+.lastCard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 1rem;
+    margin: 0 auto;
+    overflow: visible;
+
+    opacity: 0;
+    transform: translateY(130px);
+    transition: all 1s ease;
+}
+
+.lastCard-course_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 350px;
+    max-width: 450px;
+    position: relative;
+}
+
+.lastCard-image_container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    
+}
+
+.lastCard-courseCardImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+    
+}
+
+
+.lastCard-cardDescriptions {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 20px;
+    padding: 2rem 1rem 0 1rem;
+    flex-grow: 1;
+    
+}
+
+.lastCard-card_desc_div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.lastCard-cardTitle {
+    font-weight: 600;
+    padding-top: 20px;
+    height: 1.5rem;
+    padding-bottom: .5rem;
+}
+
+.lastCard-cardDesc {
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-right: 2rem;
+    height: 3rem;
+}
+
+.lastCard-stars_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 1;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    height: 22px;
+
+}
+.lastCard-stars_div img {
+    display: block;
+}
+.lastCard-stars_div span {
+    color: gray;
+}
+
+.lastCard-free_div {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: blue;
+    border-radius: 50%;
+    padding: 1.7rem 1.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+.lastCard-course_card:hover .lastCard-courseCardImg  {
+    transform: scale(1.1);
+}
+
+
+.overlay-div {
+    position: absolute;
+    top: 3rem;
+    transform: translateX(30%);
+    z-index: 10;
+    padding: 3rem 1rem 4rem 1rem;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease;
+    box-shadow: 0 10px 30px gray;
+}
+
+.lastCard-course_card:last-child .overlay-div {
+    transform: translateX(-30%);
+}
+
+.overlay-cardDesc {
+    font-weight: 600;
+    font-size: 18px;
+    width: 80%;
+}
+
+.overlay-counts-div {
+    display: flex;
+    align-items: center;
+    padding-left: 1.2rem;
+    
+}
+
+.overlay-counts-div ul {
+    display: flex;
+    flex-direction: row;
+    gap: .8rem;
+}
+
+.overlay-counts-div ul li {
+    padding-right: .6rem;
+    font-size: 12px;
+    color: gray;
+    font-size: 500;
+}
+
+.overlay-div p {
+    color: gray;
+    font-size: 15px;
+}
+
+
+.overlay-ul {
+    padding-left: 1rem;
+}
+
+.overlay-ul ul li {
+    list-style:disc;
+    color: gray;
+    font-size: 1rem;
+    font-size: 500;
+}
+
+
+.overlay-div button {
+    margin-top: 1rem;
+    background-color: orange;
+    color: black;
+    border:none;
+    padding: .8rem 2rem;
+    border-radius: 1px;
+    font-weight: 600;
+    width: 90%;
+    align-self: left;
+    transition: transform 500ms ease;
+}
+
+.overlay-div button:hover {
+    transform: scale(0.95);
+}
+
+.lastCard-course_card:hover {
+    .overlay-div {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+
+/* Styling little icons */ 
+
+
+.journey-div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 6rem 1rem;
+    text-align: center;
+}
+
+.journey-span {
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+}
+
+.journey-heading {
+    font-size: 2.3rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+}
+
+.journey-para {
+    font-weight: 600;
+    color: gray;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(130px);
+    transition: all 1s ease;
+}
+
+.little-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 4rem;
+    gap: 4rem;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: all 1s ease;
+}
+
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    height: 142px;
+    gap: .8rem
+}
+
+.icon img {
+    width: 35px;
+}
+
+.icon span {
+    color: black;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.icon p {
+    color: gray;
+    font-weight: 600;
+}
+
+
+/* ---- Styling Footer Section ---- */
+
+.footer-section {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    width: 97%;
+    padding-left: 6rem;
+    border: none;
+    border-radius: 5px;
+    height: 185px;
+    background-color: orange;
+    border: none;
+    color: black;
+    margin-bottom: -80px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+    
+}
+
+.btn-div span {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 400px
+}
+
+.buttons-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-right: 11rem;
+}
+
+.black-btn {
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 3rem;
+    transition: transform 300ms ease;
+}
+
+.transparent-btn {
+    background-color: transparent;
+    border: 1px solid black;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 1rem 3rem;
+    transition: transform 300ms ease;
+}
+
+
+.black-btn:hover, .transparent-btn:hover {
+    transform: scale(0.95);
+}
+
+
+.footer {
+    background-image: url("../../assets/footer.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 0;
+    height: 470px;
+    background-color: rgb(15, 37, 42);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    color: white;
+    padding: 0 1.4rem;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease;
+}
+
+.footer-logo-div {
+    width: 285px;
+    height: 115px;
+    color: gray;
+}
+
+.footer-logo-div img {
+    width: 100px;
+    height: 25px
+}
+
+.footer-top div {
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    gap: 1rem;
+}
+
+.footer-top div li {
+    list-style: none;
+    padding-bottom: .5rem;
+    color: gray
+}
+
+
+.footer-bottom {
+    align-self: center;
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color: white;
+    border-top: 2px solid gray;
+    padding-top: 2rem;
+}
+
+.footer-bottom p {
+    color: gray;
+}
+
+.footer-bottom span {
+    font-weight: 600;
+    color: white;
+}
+
+
+/* Animations */
+
+
+.lastCard-cards.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+/* Responsive LastCard */
+@media (max-width: 1024px) {
+    .lastCard-cards {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .lastCard-course_card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .overlay-div {
+        position: static;
+        transform: none;
+        width: 100%;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        box-shadow: none;
+    }
+
+    .lastCard-course_card:last-child .overlay-div {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .lastCard-h3 {
+        font-size: 2rem;
+        padding: 1.5rem 1rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .overlay-cardDesc {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .overlay-counts-div ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .overlay-div button {
+        width: 100%;
+        padding: 0.9rem 1rem;
+    }
+}
+
+@media (max-width: 4800px) {
+    .count {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .lastCard-h3 {
+        font-size: 1.7rem;
+        padding: 1rem;
+    }
+
+    .overlay-div {
+        padding: 1rem;
+    }
+
+    .overlay-cardDesc {
+        font-size: 15px;
+    }
+
+    .overlay-counts-div ul li {
+        font-size: 0.9rem;
+    }
+
+    .btn-div {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .buttons-div {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-right: 1rem;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Responsive LastCard section end */
+
+
+.journey-span.is-visible, .journey-heading.is-visible, .journey-para.is-visible, .little-icons.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.btn-div.is-visible, .footer-top.is-visible{
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}

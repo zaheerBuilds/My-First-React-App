@@ -1,0 +1,92 @@
+#footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: black;
+    padding: 3rem;
+}
+
+#footer img {
+    width: 1.5rem;
+}
+
+
+.footerAbove {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 4rem;
+}
+
+.footerAbove div {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    
+}
+
+.footerAbove div a {
+    text-decoration: none;
+    color: gray;
+}
+
+.footerAbove div h2 {
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.div1 {
+    flex: 1;
+    max-width: 250px;
+    padding-right: 2rem;
+}
+
+.div1 p {
+    color: gray;
+    line-height: 1.78rem;
+}
+
+.div1 .companyHeader {
+    font-size: 1.7rem;
+    font-size: 800;
+}
+
+.div2 {
+    flex: 1;
+}
+
+.div3 {
+    flex: 1;
+}
+
+.div4 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.div4 div {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+
+.footerBelow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;;
+    padding-top: 2rem ;
+    color: gray;
+    font-size: .8rem;
+}
+
+.footerBelowRight {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+
+
